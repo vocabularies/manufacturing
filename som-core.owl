@@ -33,7 +33,7 @@
         <vann:preferredNamespaceUri rdf:datatype="&xsd;string">https://raw.github.com/vocabularies/manufacturing/master/som-core.owl</vann:preferredNamespaceUri>
         <vann:preferredNamespacePrefix rdf:datatype="&xsd;string">som-core</vann:preferredNamespacePrefix>
         <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
-        <rdfs:comment rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.png"/>
+        <dcterms:description rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.png"/>
     </owl:Ontology>
     
 
