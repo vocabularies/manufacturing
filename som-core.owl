@@ -2,7 +2,6 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY time "http://www.w3.org/2006/time" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -13,11 +12,12 @@
 <rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1202459344.owl#"
      xml:base="http://www.owl-ontologies.com/Ontology1202459344.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:time="http://www.w3.org/2006/time"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl"/>
+    <owl:Ontology rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl">
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
     
 
 
@@ -41,6 +41,253 @@
     <!-- http://www.w3.org/2001/XMLSchema#time -->
 
     <rdfs:Datatype rdf:about="&xsd;time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#createdAt -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#createdAt">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#hasProperty">
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace"/>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#publishedAt -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#publishedAt">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty">
+        <rdfs:comment rdf:datatype="&xsd;string">To express a time:TemporalEntity you use the prefix tl and the URI http://purl.org/NET/c4dm/timeline.owl along with xsd:datetime in a form like 2006-01-01T10:30:00-5:00. Either you set tl:beginsAtDateTime and tl:endsAtDateTime or tl:at.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#validDuring -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#validDuring">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#accuracy -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#accuracy">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#dimensionProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#dimensionProperty">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#id -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#id">
+        <rdfs:comment rdf:datatype="&xsd;string">Example: lotNumber</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectNonURI"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idInfoProvider -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idInfoProvider">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idMedia -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idMedia">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idStandard -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idStandard">
+        <rdfs:comment rdf:datatype="&xsd;string">For language independent values, use code lists.
+</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idUDEF -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idUDEF">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#measure -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#measure">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#source -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#source">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#unitMeasure -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#unitMeasure">
+        <rdfs:comment rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX
+with one of the biggest datasets and suggests the
+use of dbpedia classes for units of measure.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace"/>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectNonURI -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectNonURI">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectURI -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectURI">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:comment rdf:datatype="&xsd;string">According to http://www.ukoln.ac.uk/metadata/dcmi-ieee/identifiers/</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalProperty">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace"/>
+    </owl:Class>
 </rdf:RDF>
 
 
