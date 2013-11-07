@@ -33,7 +33,7 @@
         <vann:preferredNamespaceUri rdf:datatype="&xsd;string">https://raw.github.com/vocabularies/manufacturing/master/som-core.owl</vann:preferredNamespaceUri>
         <vann:preferredNamespacePrefix rdf:datatype="&xsd;string">som-core</vann:preferredNamespacePrefix>
         <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
-        <dcterms:description rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.png"/>
+        <dc:description rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.png"/>
     </owl:Ontology>
     
 
@@ -150,7 +150,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace -->
 
     <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace">
-        <dcterms:description rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace.</dc:description>
     </owl:ObjectProperty>
     
 
@@ -168,7 +168,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty -->
 
     <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#temporalPropoerty">
-        <dcterms:description rdf:datatype="&xsd;string">To express a time:TemporalEntity you use the prefix tl and the URI http://purl.org/NET/c4dm/timeline.owl along with xsd:datetime in a form like 2013-11-07T00:00:00+1:00. Either you set tl:beginsAtDateTime and tl:endsAtDateTime or tl:at.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">To express a time:TemporalEntity you use the prefix tl and the URI http://purl.org/NET/c4dm/timeline.owl along with xsd:datetime in a form like 2013-11-07T00:00:00+1:00. Either you set tl:beginsAtDateTime and tl:endsAtDateTime or tl:at.</dc:description>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#objpropNamespace"/>
     </owl:ObjectProperty>
     
@@ -208,7 +208,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace">
-        <dcterms:description rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace.</dc:description>
     </owl:DatatypeProperty>
     
 
@@ -216,7 +216,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#dimensionProperty -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#dimensionProperty">
-        <dcterms:description rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX with one of the biggest datasets in which an observations comes with zero, one or more dimensions like genre, area of population, etc.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX with one of the biggest datasets in which an observations comes with zero, one or more dimensions like genre, area of population, etc.</dc:description>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
@@ -227,7 +227,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#id -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#id">
-        <dcterms:description rdf:datatype="&xsd;string">Example: lotNumber</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">Example: lotNumber</dc:description>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectNonURI"/>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
@@ -248,7 +248,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idMedia -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idMedia">
-        <dcterms:description rdf:datatype="&xsd;string">It expresses on what kind of media the ID information is written (e.g. RFID tag, barcode, stamped, …). </dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">It expresses on what kind of media the ID information is written (e.g. RFID tag, barcode, stamped, …). </dc:description>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
@@ -260,8 +260,8 @@
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idStandard">
         <rdfs:comment rdf:datatype="&xsd;string">For language independent values, use code lists.</rdfs:comment>
-        <dcterms:description rdf:datatype="&xsd;string">The standard or coding scheme that is being used.
-</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">The standard or coding scheme that is being used.
+</dc:description>
         <vs:term_status rdf:datatype="&xsd;string">archaic</vs:term_status>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
@@ -273,7 +273,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idUDEF -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#idUDEF">
-        <dcterms:description rdf:datatype="&xsd;string">A string at a form like &quot;b.o.9_1.1.14.13&quot; </dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">A string at a form like &quot;b.o.9_1.1.14.13&quot; </dc:description>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
@@ -284,7 +284,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#measure -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#measure">
-        <dcterms:description rdf:datatype="&xsd;string">It holds the observed value.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">It holds the observed value.</dc:description>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
@@ -305,7 +305,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#unitMeasure -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#unitMeasure">
-        <dcterms:description rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX with one of the biggest datasets and suggests the use of dbpedia classes for units of measure.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX with one of the biggest datasets and suggests the use of dbpedia classes for units of measure.</dc:description>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#Observation"/>
         <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#datapropNamespace"/>
@@ -327,7 +327,7 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace -->
 
     <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace">
-        <dcterms:description rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace.</dc:description>
     </owl:Class>
     
 
@@ -344,7 +344,7 @@
 
     <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject">
         <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#EntityNamespace"/>
-        <dcterms:description rdf:datatype="&xsd;string">A uniquely identifiable object for whom an agent (a human resource or a service) can provide information. To write 2 IDs, make two instances of this class and use the owl:sameAs property.</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">A uniquely identifiable object for whom an agent (a human resource or a service) can provide information. To write 2 IDs, make two instances of this class and use the owl:sameAs property.</dc:description>
     </owl:Class>
     
 
@@ -361,7 +361,7 @@
 
     <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObjectURI">
         <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
-        <dcterms:description rdf:datatype="&xsd;string">According to http://www.ukoln.ac.uk/metadata/dcmi-ieee/identifiers/</dcterms:description>
+        <dc:description rdf:datatype="&xsd;string">According to http://www.ukoln.ac.uk/metadata/dcmi-ieee/identifiers/</dc:description>
     </owl:Class>
     
 
