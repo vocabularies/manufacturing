@@ -25,11 +25,12 @@
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl">
         <dcterms:creator rdf:datatype="&xsd;string">Team of Prof. Dimitris Kiritsis. http://licpwww.epfl.ch/people.asp Contact person: nickmeet@gmail.com</dcterms:creator>
-        <dcterms:description rdf:datatype="&xsd;string">This is the core vocabulary for the QLM Messaging Interface. To comment on a class, property or individual, use the annotation properties &apos;comment&apos; and &apos;term_status&apos;. The possible values for the last one are: &apos;unstable&apos;,&apos;testing&apos;, &apos;stable&apos; and &apos;archaic&apos;.</dcterms:description>
+        <rdfs:comment rdf:datatype="&xsd;string">This is the core vocabulary for the QLM Messaging Interface. To comment on a class, property or individual, use the annotation properties &apos;comment&apos; and &apos;term_status&apos;. The possible values for the last one are: &apos;unstable&apos;,&apos;testing&apos;, &apos;stable&apos; and &apos;archaic&apos;.</rdfs:comment>
         <cc:license rdf:datatype="&xsd;string">This work is under the terms of the LinkedDesign project with Project No: 284613
 </cc:license>
         <vann:preferredNamespaceUri rdf:datatype="&xsd;string">https://raw.github.com/vocabularies/manufacturing/master/som-core.owl</vann:preferredNamespaceUri>
         <vann:preferredNamespacePrefix rdf:datatype="&xsd;string">som-core</vann:preferredNamespacePrefix>
+        <dcterms:description>https://raw.github.com/vocabularies/manufacturing/master/som-core.svg</dcterms:description>
         <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
     </owl:Ontology>
     
