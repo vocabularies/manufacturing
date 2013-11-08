@@ -274,7 +274,7 @@
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#eventStatus">
         <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -313,7 +313,7 @@
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#health">
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#LifeCyclePhase"/>
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace"/>
     </owl:DatatypeProperty>
     
 
@@ -369,9 +369,9 @@
     
 
 
-    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace -->
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace -->
 
-    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace"/>
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace"/>
     
 
 
@@ -388,9 +388,31 @@
     <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#objectStatus -->
 
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#objectStatus">
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">broken</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">inUse</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">notInUse</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -400,7 +422,7 @@
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#path2CADmodel">
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#Product"/>
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace"/>
     </owl:DatatypeProperty>
     
 
@@ -420,7 +442,7 @@
     <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#residualLife">
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#LifeCyclePhase"/>
-        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoNamespace"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-ext.owl#ldoPropNamespace"/>
     </owl:DatatypeProperty>
     
 
