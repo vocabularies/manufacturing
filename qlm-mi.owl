@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1202459344.owl#"
+     xml:base="http://www.owl-ontologies.com/Ontology1202459344.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl">
+        <dcterms:creator rdf:datatype="&xsd;string">Team of Prof. Dimitris Kiritsis. http://licpwww.epfl.ch/people.asp Contact person: nickmeet@gmail.com</dcterms:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">This is the vocabulary for the communication protocol of the QLM Messaging Interface. To avoid restricting the type of messages, each time this vocabulary is used, the type of a message will have to be defined. To comment on a class, property or individual, use the annotation properties &apos;comment&apos; and &apos;term_status&apos;. The possible values for the last one are: &apos;unstable&apos;,&apos;testing&apos;, &apos;stable&apos; and &apos;archaic&apos;.</rdfs:comment>
+        <cc:license rdf:datatype="&xsd;string">This work is under the terms of the LinkedDesign project with Project No: 284613
+</cc:license>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;string">https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix rdf:datatype="&xsd;string">qlm-mi</vann:preferredNamespacePrefix>
+        <dcterms:description rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.png"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="&cc;license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description">
+        <rdfs:subPropertyOf rdf:resource="&owl;deprecated"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;creator"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="&vs;term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="&xsd;time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#hasRequest -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#hasRequest">
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Response"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmObjPropNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmObjPropNamespace -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmObjPropNamespace">
+        <rdfs:comment rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#callback -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#callback">
+        <rdfs:comment rdf:datatype="&xsd;string">SHALL define the URL to the call-back service to be called by the system when the request is answered. </rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Subscribe"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmDataPropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#interval -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#interval">
+        <rdfs:comment rdf:datatype="&xsd;string">Positive value subscriptions SHOULD be answered with the value used as interval between responses (in seconds). The responding system SHOULD answer the request as close to the interval as possible. Answering the request exactly on the interval may not be possible. The request SHOULD be answered at every interval, even if data is not available. If data is not available, the request SHOULD be answered with an error for those intervals.
+Value 0 subscriptions MAY be answered as often as data can be read from the target. Typically used for specific diagnostics and real time monitoring applications. (May cause unnecessary data traffic.)
+Value -1 subscription SHOULD be answered every time the subscribed target publishes/pushes a new value. 
+Value -2 (minus 2) subscriptions SHOULD be answered every time the subscribed target (typically a PEID or device) connects to a QLM node.
+</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Envelope"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmDataPropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmDataPropNamespace -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmDataPropNamespace">
+        <rdfs:comment rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#time-to-live -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#time-to-live">
+        <rdfs:comment rdf:datatype="&xsd;string">The time to live (in seconds) for the QLM Messaging Interface requests. The time is counted from the time the QLM Messaging Interface request was received by the QLM node. The value “0” signifies that a response must be provided while the connection is active (in the case of HTTP, for instance). The value “-1” signifies “forever”. When ttl expires, requests SHOULD be answered with an error response. </rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Envelope"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmDataPropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Cancel -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Cancel">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Cancel subscription</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Envelope -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Envelope">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmEntityNamespace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Read -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Read">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Envelope"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Response -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Response">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Envelope"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Subscribe -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Subscribe">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Write -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Write">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmEntityNamespace -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/qlm-mi.owl#qlmEntityNamespace">
+        <rdfs:comment rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
