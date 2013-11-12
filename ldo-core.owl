@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1202459344.owl#"
+     xml:base="http://www.owl-ontologies.com/Ontology1202459344.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl">
+        <dcterms:creator rdf:datatype="&xsd;string">Team of Prof. Dimitris Kiritsis. http://licpwww.epfl.ch/people.asp Contact person: nickmeet@gmail.com</dcterms:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">This is a proposed extension to the LinkedDesign Ontology that uses the core vocabulary for the QLM Messaging Interface and the Event ontology. To comment on a class, property or individual, use the annotation properties &apos;comment&apos; and &apos;term_status&apos;. The possible values for the last one are: &apos;unstable&apos;,&apos;testing&apos;, &apos;stable&apos; and &apos;archaic&apos;.</rdfs:comment>
+        <cc:license rdf:datatype="&xsd;string">This work is under the terms of the LinkedDesign project with Project No: 284613
+</cc:license>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;string">https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix rdf:datatype="&xsd;string">ldo-core</vann:preferredNamespacePrefix>
+        <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl"/>
+        <dc:description rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.png"/>
+        <owl:imports rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="&cc;license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;creator"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="&vs;term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="&xsd;time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#belongsTo">
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Activity"/>
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCyclePhase"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#causes -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#causes">
+        <rdfs:range rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#createdAt -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#createdAt">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#temporalPropoerty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#hasActivity">
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Activity"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Product"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#hasCost -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#hasCost">
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Activity"/>
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCycleCost"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#objpropNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#isAtBillOfMaterials -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#isAtBillOfMaterials">
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Product"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Product"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#isPlacedAt -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#isPlacedAt">
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+        <rdfs:range rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoNamespace"/>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#objpropNamespace -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#objpropNamespace">
+        <rdfs:comment rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#publishedAt -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#publishedAt">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#temporalPropoerty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#temporalPropoerty -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#temporalPropoerty">
+        <rdfs:comment rdf:datatype="&xsd;string">To express a time:TemporalEntity you use the prefix tl and the URI http://purl.org/NET/c4dm/timeline.owl along with xsd:datetime in a form like 2013-11-07T00:00:00+1:00. Either you set tl:beginsAtDateTime and tl:endsAtDateTime or tl:at.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#objpropNamespace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#validDuring -->
+
+    <owl:ObjectProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#validDuring">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#temporalPropoerty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#accuracy -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#accuracy">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace">
+        <rdfs:comment rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#dimensionProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#dimensionProperty">
+        <rdfs:comment rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX in which an observation comes with zero, one or more dimensions like genre, area of population, etc</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#eventStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#eventStatus">
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">cancelled</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">happened</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">planned</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">predicted</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#health -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#health">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCyclePhase"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#id -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#id">
+        <rdfs:comment rdf:datatype="&xsd;string">An id that is not a URI like a lot-number.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idInfoProvider -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idInfoProvider">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idMedia -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idMedia">
+        <rdfs:comment rdf:datatype="&xsd;string">It expresses on what kind of media the ID information is written (e.g. RFID tag, barcode, stamped, …)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idStandard -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idStandard">
+        <rdfs:comment rdf:datatype="&xsd;string">For language independent values, use code lists.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">The standard or coding scheme that is being used</rdfs:comment>
+        <vs:term_status rdf:datatype="&xsd;string">archaic</vs:term_status>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idUDEF -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#idUDEF">
+        <rdfs:comment rdf:datatype="&xsd;string">A string at a form like &quot;b.o.9_1.1.14.13&quot;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace"/>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#measure -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#measure">
+        <rdfs:comment rdf:datatype="&xsd;string">It holds the observed value</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#objectStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#objectStatus">
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">broken</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">inUse</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">notInUse</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#path2CADmodel -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#path2CADmodel">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Product"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#propertyidUDEF -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#propertyidUDEF">
+        <rdfs:comment rdf:datatype="&xsd;string">A string at a form like &quot;b.o.9_1.1.14.13&quot;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#residualLife -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#residualLife">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCyclePhase"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#ldoPropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#unitMeasure -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#unitMeasure">
+        <rdfs:comment rdf:datatype="&xsd;string">The RDF Data Cube is a simplified version of SDMX suggests the use of dbpedia classes for units of measure</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#datapropNamespace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Activity -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Activity">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LDOnamespace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LDOnamespace -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LDOnamespace">
+        <rdfs:comment rdf:datatype="&xsd;string">This is not a domain concept and it serves just to group all domain concepts of this ontology under the same namespace</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCycleCost -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCycleCost">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LDOnamespace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCyclePhase -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LifeCyclePhase">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LDOnamespace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Product -->
+
+    <owl:Class rdf:about="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#Product">
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/ldo-core.owl#LDOnamespace"/>
+        <rdfs:subClassOf rdf:resource="https://raw.github.com/vocabularies/manufacturing/master/som-core.owl#PhysicalObject"/>
+        <rdfs:comment rdf:datatype="&xsd;string">It is the outcome of a task and not necessarily a commercial product</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
